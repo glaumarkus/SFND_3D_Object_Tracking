@@ -10,6 +10,23 @@ struct LidarPoint { // single lidar point in space
     double x,y,z,r; // x,y,z in [m], r is point reflectivity
 };
 
+struct TTC_Obs {
+  double lidar_prev = 0,lidar_curr = 0,cam_prev = 0,cam_curr = 0;
+  
+  double feed_lidar(double ttc){
+    lidar_prev = lidar_curr;
+    lidar_curr = ttc == NAN ? lidar_curr : ttc;
+    double new_ttc = lidar_prev == 0 ? lidar_curr : (lidar_prev + lidar_curr)/2;
+    return new_ttc;
+  }
+  double feed_camera(double ttc){
+    cam_prev = cam_curr;
+    cam_curr = ttc == -1000 ? cam_curr : ttc;
+    double new_ttc = cam_prev == 0 ? cam_curr : (cam_prev + cam_curr)/2;
+    return new_ttc;
+  }
+};
+
 struct BoundingBox { // bounding box around a classified object (contains both 2D and 3D data)
     
     int boxID; // unique identifier for this bounding box
