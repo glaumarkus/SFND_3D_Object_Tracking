@@ -26,7 +26,7 @@ The image processing uses a combination of detectors and describers already expl
 With the filtered LIDAR data I am already set to calculate TTC based on this information. To evaluate later performance of only camera based calculations, I will assume that LIDAR data is the ground truth of TTC. So to get a small glimpse of the situation, let's take a look into observed distances and relative speed of the preceeding vehicle:
 
 <p align="center">
-  <img src="/media/ground_truth.png" alt="result"
+  <img src="/media/ground_truth_pos.png" alt="result"
   title="result"  />
 </p>
 
