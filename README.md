@@ -1,7 +1,7 @@
 ## SensorFusion: Collision Detection System
 
 <p align="center">
-  <img src="/media/FAST-BRIEF.png" alt="result"
+  <img src="/media/FAST-BRIEF.gif" alt="result"
   title="result"  />
 </p>
 
@@ -95,13 +95,13 @@ Both could most certainly run within an embedded system with 10 fps since they b
 
 #### FAST - ORB 
 <p align="center">
-  <img src="/media/FAST-ORB.png" alt="result"
+  <img src="/media/FAST-ORB.gif" alt="result"
   title="result"  />
 </p>
 
 #### FAST - BRIEF
 <p align="center">
-  <img src="/media/FAST-BRIEF.png" alt="result"
+  <img src="/media/FAST-BRIEF.gif" alt="result"
   title="result"  />
 </p>
 
